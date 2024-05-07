@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpp2d6gqjgie"]
+
+[ext_resource type="Script" path="res://Enemies/enemy.gd" id="1_cnlmm"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_cnlmm")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Node" type="Node" parent="."]

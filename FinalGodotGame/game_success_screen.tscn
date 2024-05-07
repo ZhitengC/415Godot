@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgexe8hpu44l7"]
+
+[ext_resource type="Script" path="res://game_success_screen.gd" id="1_ggm20"]
+
+[node name="GameSuccessScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ggm20")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 217.0
+color = Color(0.223529, 1, 0.2, 0.2)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 77.0
+offset_right = 244.0
+offset_bottom = 126.0
+text = "Congrats!
+Game Clear!"
+horizontal_alignment = 1
+vertical_alignment = 1

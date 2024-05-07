@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcjqs874x6dpy"]
+
+[ext_resource type="Script" path="res://Enemies/status_panel.gd" id="1_nmrlr"]
+[ext_resource type="Texture2D" uid="uid://8tjuda5ef0nr" path="res://HealthBarBorder.png" id="1_sip6m"]
+[ext_resource type="Texture2D" uid="uid://c4e5kxqgu81ct" path="res://HealthBar.png" id="2_3ihnp"]
+
+[node name="StatusPanel" type="HBoxContainer"]
+script = ExtResource("1_nmrlr")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+value = 50.0
+texture_under = ExtResource("1_sip6m")
+texture_progress = ExtResource("2_3ihnp")

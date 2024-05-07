@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dth7u760mj4we"]
+
+[ext_resource type="Texture2D" uid="uid://cum3t7npht1ut" path="res://icon.svg" id="1_h4pv1"]
+[ext_resource type="Script" path="res://bullet.gd" id="2_ectrg"]
+[ext_resource type="Script" path="res://Hitbox.gd" id="3_r85ai"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m8n0x"]
+radius = 60.0
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_h4pv1")
+script = ExtResource("2_ectrg")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 31
+collision_mask = 17
+script = ExtResource("3_r85ai")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_m8n0x")
+
+[connection signal="hit" from="Hitbox" to="." method="_on_hitbox_hit"]
